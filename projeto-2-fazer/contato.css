@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #9dd629;
+    border-bottom: 3px solid #1111;
+}
+
+.section-header {
+    height: 80px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#image-logo {
+    width: 100%;
+    height: 100%;
+}
+
+#image-logo img {
+    width: 250px;
+    height: 70px;
+    margin-left: 30px;
+}
+
+#header-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-links a {
+    margin: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    background-color: #9dd629;
+}
+
+form {
+    width: 70%;
+    height: auto;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 15%;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+legend {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 5px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+label {
+    font-size: 16px;
+    margin-left: 5px;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.button {
+     display: flex;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     justify-content: center;
+}
+
+.button-cadastrar {
+    width: 150px;
+    height: 40px;
+    padding: 4px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    background-color: #9dd629;
+}
+
+.title {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer {
+    margin-top: 30px;
+    height: 62px;
+    position:absolute;
+    bottom: 0;
+    width:100%;
+    background-color: #9dd629;
+}
+
+.footer p {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer a {
+    margin-left: 10px;
+}
