@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pagina Contato</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="projeto2.css">
+    <link rel="stylesheet" href="contato-p.css">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <img class="logo" src="./Logotipo Tecno Start .png">
+        <div class="links">
+            <a href="file:///C:/Users/gustavo.ronconi/Documents/TecnoStart/meu-primeiro-repositorio/projeto-2-fazer/inicial-p2.html">Inicial</a>
+            <a href="file:///C:/Users/gustavo.ronconi/Documents/TecnoStart/meu-primeiro-repositorio/projeto-2-fazer/sobre-p2.html">Sobre</a>
+            <a href="file:///C:/Users/gustavo.ronconi/Documents/TecnoStart/meu-primeiro-repositorio/projeto-2-fazer/contato-p2.html" class="disabled">Contato</a>
+        </div>
+    </nav>
+    <div class="teste">
+        <form action="formulario-dados" method="post">
+            <div>
+                <h2>Dados Pessoais</h2>
+            </div>
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="name" id="nome" placeholder="Digite seu nome" required />
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" nome="sobrenome" id="sobrenome" placeholder="Digite seu Sobrenome" required />
+                <label for="data-de-nascimento">Data de Nascimento:</label>
+                <input type="date" id="data-de-nascimento" required />
+            </div>
+            <div>
+                <h2>Sexo</h2>
+                <input type="radio" name="sexo" value="1" /> Masculino
+                <input type="radio" name="sexo" value="2" /> Feminino
+                <input type="radio" name="sexo" value="3" /> LGBT
+                <input type="radio" name="sexo" value="4" checked /> Prefiro não responder
+            </div>
+            <div>
+                <h2>Dados de contato</h2>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Seu e-mail" required />
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" placeholder="Seu telefone" required />
+            </div>
+            <div>
+                <h2>Dados Acadêmicos</h2>
+                <label>Escolaridade:
+                <select name="escolaridade">
+                    <option value="selecione-escolaridade" selected disabled> Selecione A Escolaridade </option>
+                    <option value="analfabeto"> Analfabeto </option>
+                    <option value="fundamental-incompleto"> Fundamental Incompleto </option>
+                    <option value="fundamental-completo"> Fundamental Completo </option>
+                    <option value="ensino-medio-incompleto"> Ensino Médio Incompleto </option>
+                    <option value="ensino-medio-completo"> Ensino Médio Completo </option>
+                    <option value="ensino-tecnico-incompleto"> Ensino Técnico Incompleto </option>
+                    <option value="ensino-tecnico-completo"> Ensino Técnico Completo </option>
+                    <option value="ensino-superior-incompleto"> Ensino Superior Incompleto </option>
+                    <option value="ensino-superior-completo"> Ensino Superior Completo </option>
+                </select>
+                <div class="espaco">
+            </label>
+                <button class="botao-cadastro" type="submit">Cadastrar Aluno</button>
+            </div>
+    </div>
+    </div>
+    </form>
+    <footer>
+        <div class="rodape">
+            <p>Direitos reservados Jess corp &#x1F4BB; &copy;</p>
+            <a href="https://policies.google.com/privacy?hl=pt-BR" target="_blank">Politica de Privacidade</a>
+        </div>
+    </footer>
+</body>
+
+</html>
