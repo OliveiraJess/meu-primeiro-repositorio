@@ -1,0 +1,165 @@
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+    
+    .navigation-bar {
+        width: 100%;
+        height: 80px;
+        background-color: #9dd629;
+    }
+    
+    .logo {
+        display: inline-block;
+        vertical-align: top;
+        width: 250px;
+        height: 50px;
+        margin-right: 20px;
+        margin-top: 15px;
+    }
+    
+    .links {
+        float: right;
+        vertical-align: top;
+        margin-right: 20px;
+        height: 80px;
+        line-height: 80px;
+    }
+    
+    .links>a {
+        margin-left: 20px;
+        font-weight: bold;
+        text-decoration: none
+    }
+    
+    #titulo {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    
+    .conteudo {
+        margin-top: 40px;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: justify;
+        padding-bottom: 10px;
+    }
+    
+    .rodape {
+        bottom: 0px;
+        width: 100%;
+        background-color: #9dd629;
+        text-align: center;
+    }
+    
+    a.disabled {
+        pointer-events: none;
+        cursor: default;
+    }
+    
+    .botao-cadastro {
+        background-color: #9dd629;
+        color: black;
+        border-style: outset;
+        border-color: #9dd629;
+        height: 40px;
+        width: 150px;
+        margin-left: 45px;
+    }
+    
+    button {
+        background-color: #9dd629;
+        color: black;
+        border-style: outset;
+        border-color: #9dd629;
+        height: auto;
+        width: auto;
+        padding: 10px;
+    }
+    
+    img {
+        width: 300px;
+        height: 200px;
+    }
+    
+    .campo {
+        font-family: sans-serif;
+        margin-left: 10%;
+    }
+    
+    body {
+        font-family: sans-serif;
+    }
+    
+    .campo label {
+        margin-bottom: 0.2em;
+        display: block;
+    }
+    
+    .sobre {
+        text-align: center;
+    }
+    
+    p,
+    h2 {
+        padding-bottom: 10px;
+    }
+    
+    .parent {
+        display: flex;
+    }
+    
+    .text-left {
+        float: left;
+        background-color: #9dd629;
+        padding: 20px;
+    }
+    
+    .text-right {
+        float: right;
+        padding: 20px;
+        background-color: #9dd629;
+    }
+    
+    .imagem-left {
+        float: left;
+    }
+    
+    .imagem-righ {
+        float: right;
+    }
+    
+    .textos {
+        border: solid 1px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    #imagem1 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    
+    form {
+        margin-left: 10%;
+        margin-right: 10%;
+        border: solid 1px;
+        padding: 40px;
+    }
+    
+    label {
+        margin-left: 1px;
+        font-size: large;
+        padding: 1px;
+    }
+    
+    .teste {
+        padding: 80px;
+    }
+    
+    .espaco {
+        padding-top: 30px;
+        text-align: center;
+    }
