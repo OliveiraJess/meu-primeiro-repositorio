@@ -1,0 +1,15 @@
+a) Para que serve a tag `<!DOCTYPE html>`?
+Para informar ao navegador qual a versão do HTML utilizada no arquivo. 
+Essa declaração vem antes das tags HTML. 
+É apresentada na primeira linha de um código.
+
+b) Para que serve as meta tags `<meta>`?
+São comandos em HTML que você cria para descrever o conteúdo de uma página para os mecanismos de busca. 
+Fornecem dados, como título ou breve resumo sobre o assunto abordado, para programas externos.
+São adicionados à seção <head> de sua página de código. 
+Normalmente não são visíveis aos usuários, entretanto, funcionam como pequenas instruções para os algoritmos dos sites de busca.
+
+c) Qual a importância de usar a configuração de `charset`?
+Indica qual codificação foi utilizada.
+Dessa forma, o documento será interpretado, exibindo suas informações corretamente ao usuário.
+

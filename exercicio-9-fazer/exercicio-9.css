@@ -1,0 +1,59 @@
+/* Exemplo 1
+.titulo {
+    top: 50px;
+    right: 50px;
+    color: red;
+    position: fixed;
+} */
+
+/* Exemplo 2 */
+
+/* #titulo1 {
+    top: 30px;
+    left: -20px;
+    color: red;
+    position: relative;
+} */
+
+/* Exemplo 3
+.titulo {
+    top: 100px;
+    left: 50px;
+    color: red;
+    position:absolute;
+} */
+
+/* Exemplo 4 */
+
+.imagem {
+    top: 0px;
+    left: 0px;
+    opacity: 0.25;
+    position: absolute;
+    max-width: 150px;
+}
+
+body {
+    margin-left: 150px;
+    width: 70%;
+}
+
+h1 {
+    margin-left: 150px;
+}
+
+.texto1 {
+    float: left;
+    display:inline-block;
+    width: 300px;
+    margin-right: 0px;
+    color: #afbff8;
+    
+}
+
+div p {
+    text-align: justify;
+    width: 300px;
+    float: right;
+}
+}
