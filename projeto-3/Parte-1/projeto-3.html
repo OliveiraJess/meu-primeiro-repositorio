@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Start Money</title>
+    <link rel="stylesheet" href="./projeto-3.css">
+    <script src="projeto-3.js"></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img class="img-logo" src="./Logotipo.png" alt="Logotipo">
+        <img class="img-user" src="./user.png" alt="User">
+        <h1 class="titulo-cabecalho">Start Money</h1>
+    </header>
+    <form id="bloco1" action="#" method="post">
+        <div class="titulo1">
+            <h2 class="entrando">Grana Entrando<h2>
+        </div>
+        <div class="texto1">
+            <div class="form-field">
+                <label>Conta:</label>
+                <select name="conta" id=conta-1>
+                    <option value="" disabled selected> Selecione</option>
+                    <option value="carteira-fisica"> Carteira Fisíca</option>
+                    <option value="conta-salario"> Conta Salário</option>
+                    <option value="banco-inter"> Banco Inter</option>
+                    <option value="app-picpay"> App Picpay</option>
+                    <option value="reserva-de-emergência"> Reserva de emergência</option>
+                    <option value="investimentos"> Investimentos</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label for="valor-1"> Valor:</label>
+                <input type="number" id="valor-1" />
+            </div>
+            <button value="depositar" class="button1" type="button" onclick="SubmitBloco13(this.value)">Adicionar</button>
+        </div>
+    </form>
+    <form id="bloco2">
+        <div class="titulo2">
+            <h2 class="viajando">Grana Viajando<h2>
+        </div>
+        <div class="texto2">
+            <div class="form-field">
+                <label> Conta Origem:</label>
+                <select name="conta-origem" id=conta-2>
+                    <option value="" disabled selected> Selecione</option>
+                    <option value="carteira-fisica"> Carteira Fisíca</option>
+                    <option value="conta-salario"> Conta Salário</option>
+                    <option value="banco-inter"> Banco Inter</option>
+                    <option value="app-picpay"> App Picpay</option>
+                    <option value="reserva-de-emergencia"> Reserva de emergência</option>
+                    <option value="investimentos"> Investimentos</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label> Conta Destino:</label>
+                <select name="conta-destino" id=conta-3>
+                    <option value="" disabled selected> Selecione</option>
+                    <option value="carteira-fisica"> Carteira Fisíca</option>
+                    <option value="conta-salario"> Conta Salário</option>
+                    <option value="banco-inter"> Banco Inter</option>
+                    <option value="app-picpay"> App Picpay</option>
+                    <option value="reserva-de-emergencia"> Reserva de emergência</option>
+                    <option value="investimentos"> Investimentos</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label for="valor-2"> Valor:</label>
+                <input type="text" id="valor-2" />
+            </div>
+            <button value="transferir" class="button2" type="button" onclick="SubmitBloco2()">Adicionar</button>
+        </div>
+    </form>
+    <form id="bloco3">
+        <div class="titulo3">
+            <h2 class="saindo">Grana Saindo<h2>
+        </div>
+        <div class="texto3">
+            <div class="form-field">
+                <label> Conta:</label>
+                <select name="conta" id="conta-4">
+                    <option value="" disabled selected> Selecione</option>
+                    <option value="carteira-fisica"> Carteira Fisíca</option>
+                    <option value="conta-salario"> Conta Salário</option>
+                    <option value="banco-inter"> Banco Inter</option>
+                    <option value="app-picpay"> App Picpay</option>
+                    <option value="reserva-de-emergencia"> Reserva de emergência</option>
+                    <option value="investimentos"> Investimentos</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label for="valor-3"> Valor:</label>
+                <input type="text" id="valor-3" />
+            </div>
+            <button value="sacar" class="button3" type="button", onclick="SubmitBloco13(this.value)">Adicionar</button>
+        </div>
+    </form>
+    <form id="bloco4">
+        <div class="contas">
+            <h1 class="resumo-conta">Resumo das Contas</h1>
+            <h1 class="saldo-conta">Saldo das Contas</h1>
+            <h3 class="atualizado">Atualizado em</h2>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome da conta</th>
+                    <th>Saldo Atual</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Carteira Fisíca</td>
+                    <td id="carteira-fisica">0</td>
+                </tr>
+                <tr>
+                    <td>Conta Salário</td>
+                    <td id="conta-salario">0</td>
+                </tr>
+                <tr>
+                    <td>Banco Inter</td>
+                    <td id="banco-inter">0</td>
+                </tr>
+                <tr>
+                    <td>App Picpay</td>
+                    <td id="app-picpay">0</td>
+                </tr>
+                <tr>
+                    <td>Reserva de emergência</td>
+                    <td id="reserva-de-emergencia">0</td>
+                </tr>
+                <tr>
+                    <td>Investimentos</td>
+                    <td id="investimentos">0</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <footer class="rodape">
+        <p>Copyright &copy; 2021. startmoney.com.br. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+
+</html>
