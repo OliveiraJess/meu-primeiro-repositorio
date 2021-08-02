@@ -1,14 +1,26 @@
-var valor_conta = {};
-
 // saldo inicial
-valor_conta["carteira-fisica"] = 0
-valor_conta["conta-salario"] = 0
-valor_conta["banco-inter"] = 0
-valor_conta["app-picpay"] = 0
-valor_conta["reserva-de-emergência"] = 0
-valor_conta["investimentos"] = 0
+var valor_conta = {
+    "carteira-fisica": 0,
+    "conta-salario": 0,
+    "banco-inter": 0,
+    "app-picpay": 0,
+    "reserva-de-emergência": 0,
+    "investimentos": 0
+};
+
+// saldo inicial total e ultima atualizacao
+document.getElementById("saldo-total-contas").textContent = "Saldo total contas: 0";
+// document.getElementById("ultima-atualizacao").textContent = currentdate.getDate() + " " + currentdate.getHours() + currentdate.getMinutes();
 
 
+function UpdateTotal() {
+    var total = 0
+    for (const [chave, valor] of Object.entries(valor_conta)) {
+        total = total + valor
+    }
+
+    document.getElementById("saldo-total-contas").textContent = "Saldo total contas: " + total.toString();
+}
 
 // grana entrando, saindo
 function SubmitBloco13(tipo_operacao) {
@@ -42,6 +54,7 @@ function SubmitBloco13(tipo_operacao) {
         document.getElementById("bloco1").reset();
         document.getElementById("bloco3").reset();
     }
+    UpdateTotal()
 
 };
 
@@ -77,5 +90,7 @@ function SubmitBloco2() {
     else {
         document.getElementById("bloco2").reset();
     }
+    UpdateTotal()
 
 }
+
