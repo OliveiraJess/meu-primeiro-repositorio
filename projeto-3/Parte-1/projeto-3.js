@@ -13,7 +13,7 @@ document.getElementById("saldo-total-contas").textContent = "Saldo total contas:
 // document.getElementById("ultima-atualizacao").textContent = currentdate.getDate() + " " + currentdate.getHours() + currentdate.getMinutes();
 
 
-function UpdateTotal() {
+function UpdateResumo() {
     var total = 0
     for (const [chave, valor] of Object.entries(valor_conta)) {
         total = total + valor
@@ -54,7 +54,7 @@ function SubmitBloco13(tipo_operacao) {
         document.getElementById("bloco1").reset();
         document.getElementById("bloco3").reset();
     }
-    UpdateTotal()
+    UpdateResumo()
 
 };
 
@@ -90,7 +90,7 @@ function SubmitBloco2() {
     else {
         document.getElementById("bloco2").reset();
     }
-    UpdateTotal()
+    UpdateResumo()
 
 }
 
