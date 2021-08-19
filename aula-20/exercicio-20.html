@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./exercicio-20.css">
-    <link rel="stylesheet" href="./exercicio-20.js">
     <title>Formulário</title>
 </head>
 
@@ -13,38 +12,46 @@
         <div class="formulario">
             <form method="POST">
                 <div>
-                    <label>Nome</label>
-                    <input type="text">
+                    <label for="nome">Nome</label>
+                    <input required type="text" id="nome">
                 </div>
                 <div>
-                    <label>Sobrenome</label>
-                    <input type="text">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input required type="text" id="sobrenome">
                 </div>
                 <div>
-                    <label>Ano de Nascimento</label>
-                    <input type="date">
+                    <label for="nascimento">Ano de Nascimento</label>
+                    <input required type="date" id="nascimento">
                 </div>
                 <div>
-                    <label>Idade</label>
-                    <input type="number" readonly type="number" placeholder="Idade Calculada">
+                    <label for="idade">Idade</label>
+                    <input type="number" readonly type="number" placeholder="Idade Calculada" id="idade">
                 </div>
                 <div class="botao">
-                    <button type="submit">Cadastrar</button>
+                    <button type="button" id="cadastrar">Cadastrar</button>
                 </div>
             </form>
         </div>
         <div class="tabela">
-            <table >
+            <div class="botao">
+                <button type="button" id="limpar">Limpar</button>
+            </div>
+            <table>
                 <thead>
-                    <th>Nome Completo</th>
-                    <th>idade</th>
+                    <tr>
+                        <th>Nome Completo</th>
+                        <th>Idade</th>
+                    </tr>
                 </thead>
-                <tbody>
+                <tbody id="corpoTabela">
 
                 </tbody>
             </table>
         </div>
     </div>
 </body>
+<script src="./exercicio-20.js">
+
+</script>
 
 </html>

@@ -9,6 +9,10 @@
     position: relative;
     left: 25%;
     margin-top: 10px;
+    /* responsividade - midia query */
+    max-width: 1366px;
+    display: flex;
+    flex-direction: column;
 }
 
 .formulario {
@@ -38,8 +42,9 @@ input, table {
 }
 
 .botao, form {
-    text-align: center
+    text-align: center;
 }
+
 
 button {
     background-color: green;
@@ -50,13 +55,14 @@ button {
     border: 1px;
     margin: 10px;
     text-align: center;
+    width: 20%;
 }
 
 .tabela {
     padding: 1px 40px;
 }
 
-th, table {
+th, td, table {
     border: solid 1px;
     border-radius: 3px;
 }
