@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="index.css" rel="stylesheet">
+
+    <title>Insert Dinâmico</title>
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <form class="container">
+                <div class="form-control">
+                    <label for="Nome">Nome</label>
+                    <input id="Nome" required type="text">
+                </div>
+
+                <div class="form-control">
+                    <label for="Sobrenome">Sobrenome</label>
+                    <input id="Sobrenome" required type="text">
+                </div>
+
+                <div class="form-control">
+                    <label for="AnoNascimento">Ano de Nascimento</label>
+                    <input id="AnoNascimento" required type="date">
+                </div>
+
+                <div class="form-control">
+                    <label for="Idade">Idade</label>
+                    <input id="Idade" placeholder="Idade calculada" readonly required type="number" value="">
+                </div>
+
+            </form>
+            <button id="Cadastrar" type="button">Cadastrar</button>
+        </div>
+
+        <div class="card">
+            <div class="container">
+            <button id="Limpar" type="button">Limpar</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome Completo</th>
+                        <th>Idade</th>
+                    </tr>
+                </thead>
+                <tbody id="MinhaLista">
+                    <tr>
+                        <td>Teste</td>
+                        <td>22</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
