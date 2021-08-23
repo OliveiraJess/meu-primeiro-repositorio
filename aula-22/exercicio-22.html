@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./exercicio-22.css">
+    <title>Formulário Renda</title>
+</head>
+
+<body>
+    <main>
+        <h1 id="titulo">Quanto Rende...</h1>
+        <form method="POST" class="formulario">
+            <div class="card">
+                <div>
+                    <label for="valorInicial">Valor Inicial</label>
+                    <input required type="text" id="valorInicial">
+                </div>
+                <div>
+                    <label for="aporteMensal">Aporte Mensal</label>
+                    <input required type="text" id="aporteMensal">
+                </div>
+                <div>
+                    <label for="meses">Meses</label>
+                    <input required type="number" id="meses">
+                </div>
+                <div id="opcoes">
+                    <div>
+                        <input type="radio" name="opcao" value="picPay" id="picPaySelect"/> Pic Pay <input id="picPay" placeholder="120% CDI">
+                    </div>
+                    <div>
+                        <input type="radio" name="opcao" value="nubank" id="nubankSelect"/> Nubank <input id="nubank" placeholder="100% CDI">
+                    </div>
+                    <div>
+                        <input type="radio" name="opcao" value="poupanca" id="poupancaSelect"/> Poupança <input id="poupanca" readonly placeholder="2,4%">
+                    </div>
+                    <div>
+                        <input type="radio" name="opcao" value="personalizado" id="personalizadoSelect"/> <input id="personalizado">
+                    </div>
+                </div>
+                <div class="botao">
+                    <button type="button" id="calcular">Calcular</button>
+                </div>
+            </div>
+        </form>
+        <h2 id="titulo2">Rende</h2>
+    </main>
+
+</body>
+<script src="./exercicio-22.js"></script>
+
+</html>

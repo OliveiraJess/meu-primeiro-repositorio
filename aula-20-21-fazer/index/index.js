@@ -1,3 +1,5 @@
+
+
 const inputAnoNascimento = document.querySelector('#AnoNascimento');
 const inputIdade = document.querySelector('#Idade');
 const inputNome = document.querySelector('#Nome');
