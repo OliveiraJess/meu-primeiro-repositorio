@@ -7,10 +7,12 @@ botaoCalcular.addEventListener('click', calcular)
 
 
 function validaTaxa(taxa, fonteCredito) {
-    taxa = taxa.replace(",", ".")
+    console.log(taxa)
+    console.log(fonteCredito)
+
     let taxasPadrao = {
-        "picPay": 120.0 * 0.005,
-        "nubank": 100.0 * 0.005,
+        "picPay": 1.28 * 0.005,
+        "nubank": 1.0 * 0.005,
         "poupanca": 2.4,
     }
 
@@ -32,17 +34,20 @@ function calcular() {
     let aporteMensal = parseFloat(inputAporteMensal.value.replace(",", "."))
     let meses = parseInt(inputMeses.value)
     let fonteCredito = document.querySelector('input[name="opcao"]:checked').value
-    let inputTaxa = document.querySelector('#' + fonteCredito).value
+    let inputTaxa = parseFloat(document.querySelector('#' + fonteCredito).value)
     let campoRende = document.querySelector("#rende")
+    console.log(inputTaxa)
     let taxa = validaTaxa(inputTaxa, fonteCredito)
 
 
-    let rende = valorInicial * (1 + taxa) ^ meses + (aporteMensal * ((1 + taxa) ^ meses - 1) / taxa)
+    let rende = (valorInicial * ((1 + taxa) ** meses)) + ((aporteMensal * ((((1 + taxa) ** meses) - 1))) / taxa)
+    // Valor inicial ~ meses = a 
+    // Aporte mensal ~ -1 = b
+    // a + b/ taxa
+
+    let montante = (valorInicial + (meses * aporteMensal) + rende).toString().replace(".", ",")
 
 
-    let montante = (valorInicial + (meses*aporteMensal) + rende).toString().replace(".", ",")
-    
-    
     campoRende.innerHTML = montante
 
 }
