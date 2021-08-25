@@ -92,13 +92,13 @@ const pessoas = [
 ]
 
 const pessoa = {
-	nome: "Alana Vera Assis",
-	idade: 68,
-	data_nasc: "01-05-1953",
-	sexo: "Feminino",
-	estado: "PB",
-	telefone_fixo: "(83) 2837-2032",
-	celular: "(83) 99413-4852"
+    nome: "Alana Vera Assis",
+    idade: 68,
+    data_nasc: "01-05-1953",
+    sexo: "Feminino",
+    estado: "PB",
+    telefone_fixo: "(83) 2837-2032",
+    celular: "(83) 99413-4852"
 }
 
 // Um código que obtenha uma lista telefonica, contendo: `nome`, `telefone_fixo` e `celular`
@@ -132,12 +132,32 @@ const pessoa = {
 // Um código que insira elemento na lista
 
 //  let novaLista = pessoas.push(pessoa)
-//  console.log(pessoa)
+//  console.log(pessoa)(
 
 // Um código que obtenha uma lista de lista de pessoas separadas por estado, 
 // ou seja, para cada estado criar uma lista de pessoas
 
-  
-//   pessoas.forEach(nomePessoasLista => console.log(`Nome: ` + nomePessoasLista.nome + ` Estado: ` + nomePessoasLista.estado))
+estados = []
+
+// pessoas.forEach(pessoaLista => {if (!(pessoaLista.estado in estados)
+// {
+
+// })
+
+pessoas.forEach(pessoaLista => {
+    if (!(pessoaLista.estado in estados)) {
+        estados.push(pessoaLista.estado)
+    }
+})
+
+pessoasPorEstado = {}
+
+estados.forEach(estado => {
+    pessoasPorEstado[estado] = pessoas.filter(pessoaPorEstado => pessoaPorEstado.estado === estado)
+})
+
+console.log(pessoasPorEstado)
 
 // novaListaPessoas = []
+
+// novaListaPessoas = pessoaLista.filter
