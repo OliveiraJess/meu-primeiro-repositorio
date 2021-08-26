@@ -105,6 +105,15 @@ const pessoa = {
 
 //pessoas.forEach(individuo=>console.log(`Nome: ` + individuo.nome + ` Telefone: ` + individuo.telefone_fixo + ` Celular: ` + individuo.celular))
 
+const listaTelefonica = listaDePessoas.map (pessoa => {
+    return {
+        nome: pessoa.nome,
+        celular: pessoa.celular,
+        telefone: pessoa.telefone_fixo
+    }
+})
+console.log(listaTelefonica)
+
 // Um código que obtenha uma lista de pessoas cujo sexo seja `Feminino`
 
 // sexoFeminino = pessoas.filter(mulher => mulher.sexo === "Feminino")
@@ -132,17 +141,12 @@ const pessoa = {
 // Um código que insira elemento na lista
 
 //  let novaLista = pessoas.push(pessoa)
-//  console.log(pessoa)(
+//  console.log(pessoa)
 
 // Um código que obtenha uma lista de lista de pessoas separadas por estado, 
 // ou seja, para cada estado criar uma lista de pessoas
 
 estados = []
-
-// pessoas.forEach(pessoaLista => {if (!(pessoaLista.estado in estados)
-// {
-
-// })
 
 pessoas.forEach(pessoaLista => {
     if (!(pessoaLista.estado in estados)) {
@@ -158,6 +162,4 @@ estados.forEach(estado => {
 
 console.log(pessoasPorEstado)
 
-// novaListaPessoas = []
 
-// novaListaPessoas = pessoaLista.filter
