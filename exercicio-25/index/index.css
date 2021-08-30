@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.campo {
+    height: 15px;
+    width: 15px;
+    background-color: #cccccc;
+    /* campo fechado */
+}
+
+.marcado {
+    background-color: burlywood;
+    border-style: inset
+    /* campo marcado */
+}
+
+.alerta {
+    /* campo que ao redor tem bomba */
+}
+
+.aberto {
+    /* campo aberto */
+}
+
+.explodidio{
+    /* campo no qual explodiu a bomba */
+}
+
+.bomba {
+    /* campo aberto com bomba */
+}
