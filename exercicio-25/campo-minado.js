@@ -34,11 +34,40 @@ function obterNumeroInteiroAleatorio(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
+function checarBombaAoRedor(bombasTabuleiro, x, y) {
+    checagens = {}
+    posicoesValidas = []
+    checagens[1] = [x - 1, y - 1]
+    checagens[2] = [x - 1, y + 1]
+    checagens[3] = [x + 1, y + 1]
+    checagens[4] = [x + 1, y - 1]
+    checagens[5] = [x, y - 1]
+    checagens[6] = [x, y + 1]
+    checagens[7] = [x + 1, y]
+    checagens[8] = [x - 1, y]
+    for (const [numeroChecagem, listaXY] of Object.entries(checagens)) {
+        isNegative = false
+        listaXY.forEach((posicao) => {
+            if (posicao < 0) {
+                isNegative = true
+            }            
+        });
+
+        if (!(isNegative)) {
+            posicoesValidas.push(checagens[numeroChecagem])
+        }
+    }
+    console.log("checagens")
+}
+
 function atribuirBombasAosCampos(bombasTabuleiro) {
     for (let i = 0; i < 20; i++) {
         linha = obterNumeroInteiroAleatorio(0, 15)
         coluna = obterNumeroInteiroAleatorio(0, 15)
         bombasTabuleiro[linha][coluna] = true
+    }
+    for (const [x, y] of Object.entries(bombasTabuleiro)) {
+        checarBombaAoRedor(bombasTabuleiro, x, y)
     }
     return bombasTabuleiro
 }
