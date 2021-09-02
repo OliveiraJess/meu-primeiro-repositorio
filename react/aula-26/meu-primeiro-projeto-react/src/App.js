@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./app.css";
+
+import Conteudo from "./components/Conteudo";
+import Card from "./components/card/Card";
+
 
 function App() {
-  const nome = "Jessica"
-  const idade = 24
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Meu nome é {nome}</p>
-        <p>E tenho {idade} anos</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-app">
+      <div className="group-cards">
+        <Card titulo="Primeiro Titulo"
+          nome="Jessica" idade="24"
+          altura='500px'
+          largura="500px"></Card>
+        <Card />
+        <Card />
+      </div>
+
+      <Conteudo nome="Pedro" idade="22"> </Conteudo>
     </div>
   );
 }
