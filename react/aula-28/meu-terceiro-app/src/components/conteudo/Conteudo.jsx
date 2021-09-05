@@ -1,12 +1,12 @@
 import './conteudo.css'
 
-function Conteudo(props){
+function Conteudo(props) {
 
 
-    return(
-    <spam className="Conteudo">
-        {props.children}
-    </spam>
+    return (
+        <span className="Conteudo">
+            {props.children}
+        </span>
     )
 
 }

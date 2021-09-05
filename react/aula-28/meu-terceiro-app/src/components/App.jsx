@@ -1,10 +1,13 @@
 import Card from './card/Card'
+import pokemons from './pokemons';
+
 
 function App() {
     return (
-    <> 
-    <Card></Card>
-    </>
+        <div>
+            {pokemons.map(pokemon => <Card key={pokemon.id} numero={pokemon.numero} nome={pokemon.nome}
+                atributo={pokemon.atributo} pokemonImage={pokemon.pokemonImage} />)}
+        </div>
     );
 }
 

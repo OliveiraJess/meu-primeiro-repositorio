@@ -6,8 +6,6 @@ function Atributo({ nome }) {
         case 'fogo':
             atributo = { "backgroundColor": "red", "color": "white" }
             break
-
-
         case 'agua':
             atributo = { "backgroundColor": "blue", "color": "white" }
             break
@@ -20,6 +18,13 @@ function Atributo({ nome }) {
             atributo = { "backgroundColor": "purple", "color": "white" }
             break
 
+        case 'inseto':
+            atributo = { "backgroundColor": "oliveDrab", "color": "white" }
+            break
+
+        case 'voador':
+            atributo = { "backgroundColor": "cyan", "color": "black" }
+            break
 
         default:
             atributo = { "backgroundColor": "gray", "color": "black" }

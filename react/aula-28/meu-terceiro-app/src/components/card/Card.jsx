@@ -3,22 +3,49 @@ import Titulo from '../titulo/Titulo'
 import Conteudo from '../conteudo/Conteudo';
 import './card.css'
 
+
 function Card(props) {
     return (
-        <div className="card">
+        <ul className="card">
             <div className="cardImage">
-                <img src="../../img/001.png"></img>
+                <img scr={props.pokemonImage} alt='imagem_do_pokemon'></img>
             </div>
             <div className="cardConteudo">
-                <Conteudo>001</Conteudo>
-                <Titulo>Bulbasaur</Titulo>
+                <Conteudo numero={props.numero}></Conteudo>
+                <Titulo nome={props.nome}></Titulo>
                 <ul>
-                    <li><Atributo nome='planta' /></li>
-                    <li><Atributo nome='veneno' /></li>
+                    <li>{props.atributo.map((atributo, index) => <Atributo key={index} nome={atributo} />)} </li>
                 </ul>
             </div>
-        </div>
+        </ul>
     )
 
 }
-export default Card
+export default Card;
+
+
+
+
+
+
+
+
+// function Card(props) {
+//     return (
+//         <div className="card">
+//             <div className="cardImage">
+//                 <img src="../../img/001.png"></img>
+//             </div>
+//             <div className="cardConteudo">
+//                 <Conteudo>001</Conteudo>
+//                 <Titulo>Bulbasaur</Titulo>
+//                 <ul>
+//                     <li><Atributo nome='planta' /></li>
+//                     <li><Atributo nome='veneno' /></li>
+//                 </ul>
+//             </div>
+//         </div>
+//     )
+
+// }
+// export default Card;
