@@ -8,11 +8,11 @@ function Card(props) {
     return (
         <ul className="card">
             <div className="cardImage">
-                <img scr={props.pokemonImage} alt='imagem_do_pokemon'></img>
+                <img src={props.pokemonImage} alt='imagem-do-pokemon'></img>
             </div>
             <div className="cardConteudo">
-                <Conteudo numero={props.numero}></Conteudo>
-                <Titulo nome={props.nome}></Titulo>
+                <Conteudo>{props.numero}</Conteudo>
+                <Titulo>{props.nome}</Titulo>
                 <ul>
                     <li>{props.atributo.map((atributo, index) => <Atributo key={index} nome={atributo} />)} </li>
                 </ul>
