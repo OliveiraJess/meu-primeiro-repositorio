@@ -1,0 +1,18 @@
+.externalCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 2em;
+    border: 2px solid chartreuse;
+    border-radius: 10px;   
+}
+
+.externalCardContent {
+    width: 90%
+}
+
+.externalCard h1 {
+    margin: .5em 0 .3em;
+}
