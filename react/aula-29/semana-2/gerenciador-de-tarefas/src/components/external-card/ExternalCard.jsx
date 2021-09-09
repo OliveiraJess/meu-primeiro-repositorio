@@ -6,18 +6,11 @@ export default function ExternalCard(props) {
 
             <div className="externalCardContent">
                 <h1>
-                    {props.children}
+                    {props.title}
                 </h1>
-                <div className="addTaks">
-                    <input type="text" id="tarefas"></input>
-                    <button type="submit" id="adicionar">Adicionar</button>
-                </div>
-                <ul>
-                    <li>
-                        <div className="task">quis ut nam facilis et officia qui</div>
-                    </li>
-                </ul>
+                {props.children}
             </div>
+
         </div>
     )
 }

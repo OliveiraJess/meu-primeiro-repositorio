@@ -1,0 +1,33 @@
+.tarefa {
+    width: 100%;
+    background-color: #444;
+    margin: 8px 0;
+    line-height: 2em;
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-between;
+    color: #eee;
+    align-items: center;
+}
+.tarefa h1 {
+    background-color: #444;
+    display: inline-block;
+    font-size: 16px;
+    margin: .25em auto .25em .5em;
+    flex: 2;
+    cursor: pointer;
+}
+.botoes {
+    background-color: #444;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarefa .botoes button {
+    background-color: #444;
+    border: none;
+    color: chartreuse;
+    margin: 0 5px;
+    cursor: pointer;
+}

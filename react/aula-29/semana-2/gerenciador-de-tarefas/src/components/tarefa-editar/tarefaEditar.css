@@ -1,0 +1,27 @@
+.tarefaEditar {
+    background: #444;
+	margin: 15px 0;
+	padding: 15px 20px;
+	display: flex;
+	flex-direction: column;
+	color: #eee;
+	border-radius: 5px;
+}
+
+.tarefaEditar h1 {
+    background: #444;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+	color: chartreuse;
+}
+
+.tarefaEditar textarea {
+    text-align: justify;
+    resize: none;
+    min-height: 5em;
+    max-height: none;
+    background: #444;
+    border: none;
+}
+

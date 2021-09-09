@@ -1,11 +1,15 @@
-*{
+* {
   margin: 0;
   padding: 0;
   background-color: #222;
   color: #fcfcfc;
 }
 
-main{
+ul {
+  list-style: none;
+}
+
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,3 +25,31 @@ main{
   width: 80%;
   max-width: 1366px;
 }
+
+.row {
+  width: 100;
+}
+
+.space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flex2 {
+  flex: 2;
+}
+
+.theme-dark {
+  background-color: #444444;
+  color: chartreuse;
+}
+
+.contrast-theme{
+    background-color: chartreuse;
+    color: #444444;
+}
+
