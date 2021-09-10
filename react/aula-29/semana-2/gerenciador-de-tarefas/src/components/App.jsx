@@ -81,6 +81,19 @@ export function AppVisualizar() {
 }
 
 export function AppEditar() {
+  const [tarefas, setTarefas] = useState([])
+
+  let conteudo = ""
+
+  function coletarInformacaoDoEditar(conteudoEditado) {
+    conteudo = conteudoEditado
+  }
+
+  function handleOnClickSalvar() {
+    setTarefas([{title:"teste", conteudo, id:1}])
+    console.log(tarefas)
+  }
+
   return (
     <main>
       <div className="container">
@@ -89,10 +102,10 @@ export function AppEditar() {
           <div className="row space-evenly">
             <Botao>Voltar</Botao>
             <span className="flex1"></span>
-            <Botao>Salvar</Botao>
+            <Botao onclick={handleOnClickSalvar}>Salvar</Botao>
           </div>
 
-          <TarefaEditar title="Minha primeira tarefa" readOnly="false">
+          <TarefaEditar title="Minha primeira tarefa" coletarInformacaoDoEditar={coletarInformacaoDoEditar}>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, saepe quidem animi illo, accusamus consequuntur, voluptatum ipsa voluptatem quo repudiandae nihil veritatis? Ipsa fuga dolorem est labore itaque dolores corporis.
           </TarefaEditar>
         </ExternalCard>
