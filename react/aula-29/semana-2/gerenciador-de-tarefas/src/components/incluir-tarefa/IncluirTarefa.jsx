@@ -15,6 +15,7 @@ export default function IncluirTarefa(props) {
 
     function handleOnChageInput(event) {
         setInput(event.target.value)
+        console.log(input)
     }
 
 

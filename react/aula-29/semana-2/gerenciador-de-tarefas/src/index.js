@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {AppPrincipal, AppVisualizar, AppEditar} from './components/App';
-
+// import {AppPrincipal, AppVisualizar, AppEditar} from './components/App';
+import App from './components/App'
 ReactDOM.render(
   <React.StrictMode>
-    <AppPrincipal />
-    <AppVisualizar />
-    <AppEditar />
+    <App />
+    {/* <AppVisualizar />
+    <AppEditar /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
