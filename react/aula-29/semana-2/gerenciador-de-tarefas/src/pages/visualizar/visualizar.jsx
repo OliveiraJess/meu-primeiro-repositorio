@@ -5,11 +5,14 @@ import { useState } from "react";
 import Botao from "../../components/botao/Botao";
 import TarefaEditar from "../../components/tarefa-editar/TarefaEditar";
 import { useHistory } from "react-router-dom";
+import "../../components/botao/botao.css"
 
 
 
 export function AppVisualizar() {
     const history = useHistory();
+
+          
 
   return (
     <main>
@@ -20,9 +23,8 @@ export function AppVisualizar() {
             <button onClick={() => history.push("/")}>Voltar</button>
             <span className="flex2"></span>
           </div>
-
-          <TarefaEditar title="Minha primeira tarefa" readOnly="true">
-          vizualizar
+          <TarefaEditar readOnly="true">
+          visualizar
           </TarefaEditar>
         </ExternalCard>
 

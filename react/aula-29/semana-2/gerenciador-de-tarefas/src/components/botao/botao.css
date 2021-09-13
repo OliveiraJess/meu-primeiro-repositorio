@@ -1,4 +1,4 @@
-.botao {
+.botao, button {
     background-color: chartreuse;
     color: #444;
     font-weight: bold;
