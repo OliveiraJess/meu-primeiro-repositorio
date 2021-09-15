@@ -6,7 +6,6 @@ export default function IncluirTarefa(props) {
     const [input, setInput] = useState('')
 
     function handleOnClickAdicionar() {
-    
         if (input.length > 0) {
             props.adicionarTarefa(input)
             setInput('')
@@ -15,7 +14,6 @@ export default function IncluirTarefa(props) {
 
     function handleOnChageInput(event) {
         setInput(event.target.value)
-        console.log(input)
     }
 
 

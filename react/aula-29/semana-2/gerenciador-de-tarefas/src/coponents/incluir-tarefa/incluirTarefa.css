@@ -5,15 +5,15 @@
     flex-direction: row;
 }
 
-.incluirTarefa input{
+.incluirTarefa input {
     height: 2.5em;
-	border-radius: 5px;
-	border: none;
-	flex: 2;
-	background-color: #444;
-	color: #eee;
+    border-radius: 5px;
+    border: none;
+    flex: 2;
+    background-color: #444;
+    color: #eee;
 }
 
-.incluirTarefa .botao{
+.incluirTarefa .botao {
     margin-left: .6em;
 }

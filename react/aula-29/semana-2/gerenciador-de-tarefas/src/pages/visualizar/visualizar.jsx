@@ -1,34 +1,45 @@
-import IncluirTarefa from "../../components/incluir-tarefa/IncluirTarefa";
-import ExternalCard from "../../components/external-card/ExternalCard";
-import Tarefa from "../../components/tarefa/Tarefa";
-import { useState } from "react";
-import Botao from "../../components/botao/Botao";
-import TarefaEditar from "../../components/tarefa-editar/TarefaEditar";
-import { useHistory } from "react-router-dom";
-import "../../components/botao/botao.css"
+import { useHistory, useParams, useLocation } from "react-router-dom";
 
+import { ExternalCard, Botao, TarefaEditar } from "../../coponents/components";
+import { NOT_FOUND } from "../../routes/rotas";
 
+export default function PageVisualizar({ tarefas }) {
+  const location = useLocation()
+  const {id} = useParams()
+  const history = useHistory()
+  let tarefaAtual
 
-export function AppVisualizar() {
-    const history = useHistory();
+  function voltar() {
+    history.goBack()
+  }
 
-          
+  function validarLocation(){
+    if(location.pathname.includes('rex->se numero')){
+      return id
+    }{
+      history.push(NOT_FOUND)
+    }
+  }
+
+  function tarefaExiste() {
+    tarefaAtual = tarefas.find(tarefa => tarefa.id.toString() === validarLocation())
+  }
 
   return (
     <main>
+      {tarefaExiste()}
       <div className="container">
 
-        <ExternalCard title="Lista De Tarefas - Visualizar">
+        <ExternalCard title="Vizualizar Tarefa">
           <div className="row space-evenly">
-            <button onClick={() => history.push("/")}>Voltar</button>
+            <Botao onclick={(voltar)}>Voltar</Botao>
             <span className="flex2"></span>
           </div>
-          <TarefaEditar readOnly="true">
-          visualizar
-          </TarefaEditar>
+
+          <TarefaEditar tarefa={tarefaAtual} readOnly={true} />
         </ExternalCard>
 
       </div>
     </main>
-  );
+  )
 }

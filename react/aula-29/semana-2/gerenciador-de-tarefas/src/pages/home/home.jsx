@@ -1,30 +1,25 @@
-import IncluirTarefa from "../../components/incluir-tarefa/IncluirTarefa";
-import ExternalCard from "../../components/external-card/ExternalCard";
-import Tarefa from "../../components/tarefa/Tarefa";
-import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
-let id = 0;
+import { ExternalCard, IncluirTarefa, Tarefa } from "../../coponents/components";
 
-export default function PageHome() {
-    const [tarefas, setTarefas] = useState([])
-
+export default function PageHome({ tarefas, setTarefas, id, setId }) {
+    const history = useHistory()
 
     function incrementarId() {
-        return id++;
+        setId(id + 1)
     }
-
 
     function adicionarTarefa(tituloDaTarefa) {
 
         const novasTarefas = [{
-            id: incrementarId(),
+            id: id,
             titulo: tituloDaTarefa,
             concluida: false,
             conteudo: ""
         }, ...tarefas]
 
         setTarefas(novasTarefas)
-
+        incrementarId()
     }
 
     function deletarTarefa(idTarefa) {
@@ -32,11 +27,22 @@ export default function PageHome() {
         setTarefas(novasTarefas);
     }
 
+    function visualizarTarefa(idTarefa) {
+        history.push(`/${idTarefa}`)
+    }
+
+    function editarTarefa(idTarefa) {
+        history.push(`/${idTarefa}/editar`)
+    }
+
     const tarefaFromList = () => {
         return tarefas.map(tarefa => {
             return (
                 <li key={tarefa.id}>
-                    <Tarefa tarefa={tarefa} deletar={deletarTarefa}></Tarefa>
+                    <Tarefa tarefa={tarefa}
+                        visualizar={visualizarTarefa}
+                        editar={editarTarefa}
+                        deletar={deletarTarefa} />
                 </li>
             )
         })
@@ -45,7 +51,7 @@ export default function PageHome() {
     return (
         <main>
             <div className="container">
-                <ExternalCard title="Lista De Tarefas - Principal">
+                <ExternalCard title="Minhas Tarefas">
                     <IncluirTarefa adicionarTarefa={adicionarTarefa} />
                     <ul>
                         {tarefaFromList()}
