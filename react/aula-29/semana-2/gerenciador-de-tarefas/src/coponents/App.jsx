@@ -12,18 +12,18 @@ export default function App() {
   const [id, setId] = useState(0)
   const [tarefasFinalizadas, setTarefasFinalizadas] = useState(0)
 
-  useEffect(() => {
-    setTarefasFinalizadas(contadorDeTarefasFinalizadas())
-  }, [tarefas])
-
+  
   function contadorDeTarefasFinalizadas() {
     return tarefas.filter(tarefa => tarefa.concluida === true).length
   }
 
+  useEffect(() => {
+    setTarefasFinalizadas(contadorDeTarefasFinalizadas())
+  }, [tarefas])
+
   return (
     <Router>
       <MenuNav />
-
       <Switch>
         <Route path={HOME} exact>
           <PageHome
