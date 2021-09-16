@@ -1,6 +1,6 @@
 import './app.css';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { MenuNav } from './components';
@@ -10,6 +10,15 @@ import { HOME, VISUALIZAR, EDITAR, NOT_FOUND } from '../routes/rotas'
 export default function App() {
   const [tarefas, setTarefas] = useState([])
   const [id, setId] = useState(0)
+  const [tarefasFinalizadas, setTarefasFinalizadas] = useState(0)
+
+  useEffect(() => {
+    setTarefasFinalizadas(contadorDeTarefasFinalizadas())
+  }, [tarefas])
+
+  function contadorDeTarefasFinalizadas() {
+    return tarefas.filter(tarefa => tarefa.concluida === true).length
+  }
 
   return (
     <Router>
@@ -17,7 +26,13 @@ export default function App() {
 
       <Switch>
         <Route path={HOME} exact>
-          <PageHome tarefas={tarefas} setTarefas={setTarefas} id={id} setId={setId} />
+          <PageHome
+            tarefas={tarefas}
+            setTarefas={setTarefas}
+            id={id} 
+            setId={setId}
+            tarefasFinalizadas={tarefasFinalizadas}
+            totalDeTarefas={tarefas.length} />
         </Route>
         <Route path={VISUALIZAR} exact>
           <PageVisualizar tarefas={tarefas} />

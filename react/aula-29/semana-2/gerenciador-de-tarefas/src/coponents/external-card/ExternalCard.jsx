@@ -1,16 +1,20 @@
 import './externalCard.css'
 
-export default function ExternalCard(props) {
+export default function ExternalCard({title, finalizadas, total, children}) {
     return (
         <div className="externalCard">
 
             <div className="externalCardContent">
-                <h1>
-                    {props.title}
-                </h1>
-                {props.children}
+                <div className="tituloContador">
+                    <h1>
+                        {title}
+                    </h1>
+                    <div>
+                        {finalizadas?finalizadas:0}/{total?total:0}
+                    </div>
+                </div>
+                {children}
             </div>
-
         </div>
     )
 }

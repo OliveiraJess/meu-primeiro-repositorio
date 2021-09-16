@@ -15,4 +15,18 @@
 
 .externalCard h1 {
     margin: .5em 0 .3em;
+    display: inline-block;
+    flex: 2;
+}
+
+.tituloContador {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tituloContador div {
+    flex: 1;
+    text-align: center;
 }

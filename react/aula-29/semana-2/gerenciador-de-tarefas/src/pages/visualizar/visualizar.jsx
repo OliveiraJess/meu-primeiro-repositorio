@@ -13,16 +13,8 @@ export default function PageVisualizar({ tarefas }) {
     history.goBack()
   }
 
-  function validarLocation(){
-    if(location.pathname.includes('rex->se numero')){
-      return id
-    }{
-      history.push(NOT_FOUND)
-    }
-  }
-
   function tarefaExiste() {
-    tarefaAtual = tarefas.find(tarefa => tarefa.id.toString() === validarLocation())
+    tarefaAtual = tarefas.find(tarefa => tarefa.id.toString() === id)
   }
 
   return (
