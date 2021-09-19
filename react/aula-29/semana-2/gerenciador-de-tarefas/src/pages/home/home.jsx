@@ -2,9 +2,14 @@ import { useHistory } from "react-router-dom";
 
 import { ExternalCard, IncluirTarefa, Tarefa } from "../../coponents/components";
 
-export default function PageHome({ tarefas, setTarefas, id, setId, tarefasFinalizadas, totalDeTarefas }) {
+export default function PageHome({ id, setId, tarefasFinalizadas, totalTarefas }) {
     const history = useHistory()
- 
+    const tarefas = tratarValorLS()
+
+    function tratarValorLS() {
+        const tarefas = localStorage.getItem("tarefas")
+        return tarefas? JSON.parse(tarefas) : []
+    }
 
     function incrementarId() {
         setId(id + 1)
@@ -19,13 +24,19 @@ export default function PageHome({ tarefas, setTarefas, id, setId, tarefasFinali
             conteudo: ""
         }, ...tarefas]
 
-        setTarefas(novasTarefas)
+        adicionarNovasTarefasAoLS(novasTarefas)
         incrementarId()
+    }
+
+    function adicionarNovasTarefasAoLS(novasTarefas){
+        localStorage.setItem("tarefas",JSON.stringify(novasTarefas))
+        window.location.reload()
     }
 
     function deletarTarefa(idTarefa) {
         const novasTarefas = tarefas.filter(tarefa => tarefa.id !== idTarefa);
-        setTarefas(novasTarefas);
+        adicionarNovasTarefasAoLS(novasTarefas)
+        window.location.reload()
     }
 
     function visualizarTarefa(idTarefa) {
@@ -36,15 +47,14 @@ export default function PageHome({ tarefas, setTarefas, id, setId, tarefasFinali
         history.push(`/${idTarefa}/editar`)
     }
 
-    function finalizarTarefa(idTarefa) {
+    function alterarStatusTarefa(idTarefa) {
         const novasTarefas = tarefas.map(tarefa => {
-            if (tarefa.id === idTarefa) {
+            if(tarefa.id === idTarefa){
                 tarefa.concluida = !tarefa.concluida
             }
             return tarefa
-        });
-
-        setTarefas(novasTarefas);
+        })
+        adicionarNovasTarefasAoLS(novasTarefas)
     }
 
     const tarefaFromList = () => {
@@ -54,8 +64,8 @@ export default function PageHome({ tarefas, setTarefas, id, setId, tarefasFinali
                     <Tarefa tarefa={tarefa}
                         visualizar={visualizarTarefa}
                         editar={editarTarefa}
-                        deletar={deletarTarefa} 
-                        alterarStatus={finalizarTarefa}/>
+                        deletar={deletarTarefa}
+                        alterarStatus={alterarStatusTarefa} />
                 </li>
             )
         })
@@ -64,7 +74,7 @@ export default function PageHome({ tarefas, setTarefas, id, setId, tarefasFinali
     return (
         <main>
             <div className="container">
-                <ExternalCard title="Minhas Tarefas" total={totalDeTarefas} tarefasFinalizadas={tarefasFinalizadas}>
+                <ExternalCard title="Minhas Tarefas" finalizadas={tarefasFinalizadas} total={totalTarefas}>
                     <IncluirTarefa adicionarTarefa={adicionarTarefa} />
                     <ul>
                         {tarefaFromList()}

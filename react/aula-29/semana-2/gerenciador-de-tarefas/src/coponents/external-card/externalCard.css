@@ -14,19 +14,19 @@
 }
 
 .externalCard h1 {
-    margin: .5em 0 .3em;
     display: inline-block;
+    margin: .5em 0 .3em;
     flex: 2;
 }
 
-.tituloContador {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.tituloContador div {
+.externalCard span {
     flex: 1;
     text-align: center;
+}
+
+.externalCardContent div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }

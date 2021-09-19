@@ -8,6 +8,10 @@ export default function MenuNav() {
         <nav>
             <ul>
                 <li><Link to={HOME}>Home</Link ></li>
+                <li><button onClick={()=>{
+                    sessionStorage.removeItem("usuario")
+                    window.location.reload()
+                }}>Logout</button></li>
             </ul>
         </nav>
     )

@@ -24,6 +24,7 @@
     flex: 1;
     display: flex;
     justify-content: space-between;
+    margin-right: 5px;
 }
 
 .tarefa .botoes button {
@@ -32,4 +33,8 @@
     color: chartreuse;
     margin: 0 5px;
     cursor: pointer;
+}
+
+.concluida {
+    box-shadow: inset 0px 0px 0px 3px chartreuse;
 }
