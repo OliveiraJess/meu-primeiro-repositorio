@@ -1,6 +1,8 @@
 import { Botao } from "../../coponents/components";
+import { useHistory } from "react-router-dom";
 
-export default function PageLogin(){
+export default function PageLogin() {
+    const history = useHistory()
 
 
     return (
@@ -8,13 +10,18 @@ export default function PageLogin(){
         <form>
             <label>
                 Nome do Usuário
-                <input id='Usuario'/>
+                <input id='usuario' placeholder="Usuário" required />
             </label>
-            <Botao onclick={()=>{
-                const user = document.querySelector('#Usuario').value
-                sessionStorage.setItem("usuario", user) 
-                window.location.reload()
-            }}>Salvar</Botao>
+            <label>Senha:
+                <input type="password" id="password" placeholder="Senha" required />
+            </label>
+            <Botao onclick={() => {
+                const user = document.querySelector('#usuario').value
+                sessionStorage.setItem("usuario", user)
+                localStorage.setItem("tarefas", { user: [] })
+                history.push('/')
+            }}>Login
+            </Botao>
         </form>
     )
 }

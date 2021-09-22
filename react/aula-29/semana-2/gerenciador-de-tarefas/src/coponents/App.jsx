@@ -14,7 +14,7 @@ export default function App() {
 
   function valorInicialTarefas() {
     const valorInicial = localStorage.getItem("tarefas")
-    return valorInicial ? JSON.parse(valorInicial) : []
+    return valorInicial ? JSON.parse(valorInicial) : {}
 
   }
 
@@ -30,28 +30,29 @@ export default function App() {
   useEffect(() => {
     setTarefasFinalizadas(countTarefasFinalizadas())
     localStorage.setItem("tarefas", JSON.stringify(tarefas))
-  }, [tarefas])
+  }, [tarefas["usuario"]])
 
   useEffect(() => {
     localStorage.setItem("id", JSON.stringify(id))
   }, [id])
 
 
-function validarUsuarioLogado() {
-  const usuario = sessionStorage.getItem("usuario")
-  if(!usuario){
-    return <PageLogin/>
-  }else{
-    return <PageHome
-            tarefas={tarefas}
-            setTarefas={setTarefas}
-            id={id}
-            setId={setId}
-            tarefasFinalizadas={tarefasFinalizadas}
-            totalTarefas={tarefas.length} />
+  function validarUsuarioLogado() {
+    const usuario = sessionStorage.getItem("usuario")
+    if (!usuario) {
+      return <PageLogin />
+    } else {
+      return <PageHome
+        tarefas={tarefas}
+        setTarefas={setTarefas}
+        id={id}
+        setId={setId}
+        tarefasFinalizadas={tarefasFinalizadas}
+        totalTarefas={tarefas.length} />
+    }
+
   }
 
-} 
 
   return (
     <Router>
@@ -59,7 +60,7 @@ function validarUsuarioLogado() {
       <MenuNav />
 
       <Switch>
-        <Route path={LOGIN} exact component={PageLogin}/>
+        <Route path={LOGIN} exact component={PageLogin} />
         <Route path={HOME} exact>
           {validarUsuarioLogado()}
         </Route>
