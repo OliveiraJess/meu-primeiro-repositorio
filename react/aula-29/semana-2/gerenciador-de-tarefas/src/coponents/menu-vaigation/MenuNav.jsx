@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom'
-import { HOME, LOGIN } from '../../routes/rotas'
+import { HOME, NOT_FOUND } from '../../routes/rotas'
 
 
 export default function MenuNav() {
@@ -8,7 +8,10 @@ export default function MenuNav() {
         <nav>
             <ul>
                 <li><Link to={HOME}>Home</Link ></li>
-                <li><Link to={LOGIN}>Login</Link ></li>
+                <li><button onClick={()=>{
+                    sessionStorage.removeItem("usuario")
+                    window.location.reload()
+                }}>Logout</button></li>
             </ul>
         </nav>
     )

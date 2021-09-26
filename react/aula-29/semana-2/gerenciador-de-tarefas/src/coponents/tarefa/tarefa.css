@@ -33,6 +33,8 @@
     color: chartreuse;
     margin: 0 5px;
     cursor: pointer;
+    height: 2em;
+
 }
 
 .concluida {
