@@ -1,6 +1,5 @@
 import BotaoHome from '../components/BotaoHome'
 import BotaoVoltar from '../components/BotaoVoltar'
-import CartaoVisitaDetalhes from '../components/CartaoVisitaDetalhes'
 import CartoesVisita from '../components/CartoesVisita'
 
 function CartoesVisitaPage() {
@@ -10,7 +9,6 @@ function CartoesVisitaPage() {
             <BotaoVoltar />
             <BotaoHome/>
             <CartoesVisita/>
-            <CartaoVisitaDetalhes/>
         </div>
     )
 }

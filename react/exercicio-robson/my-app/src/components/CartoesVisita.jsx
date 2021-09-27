@@ -30,7 +30,7 @@ useEffect(() => {
       <main>
         <ul>
           {cartoes.map(cartao => (
-              <Link key={cartao.id} to={`/cartoes-visita/${cartao.id}`}>
+              <Link key={cartao.id} to={`/cartao-visita/${cartao.id}`}>
               <li >
                 <h2>{cartao.name}</h2>
                 <p>{cartao.phone}</p>

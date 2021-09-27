@@ -32,7 +32,7 @@ function App() {
         <Route path='/cartoes-visita'>
           <CartoesVisitaPage />
         </Route>
-        <Route path='/cartoes-visita/:id'>
+        <Route path='/cartao-visita/:id'>
           <CartoesVisitaDetalhe />
         </Route>
       </Switch>
