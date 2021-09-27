@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 function CartoesVisita() {
@@ -10,14 +10,14 @@ function CartoesVisita() {
 
   useEffect(() => {
     async function fecthCartoes() {
-      const {data} = await axios.get('https://jsonplaceholder.typicode.com/users')
+      const { data } = await axios.get('https://jsonplaceholder.typicode.com/users')
       setCartoes(data)
     } fecthCartoes()
   }, [])
 
-useEffect(() => {
-  setQuantidade(cartoes.length)
-}, [cartoes])
+  useEffect(() => {
+    setQuantidade(cartoes.length)
+  }, [cartoes])
 
   return (
     <div >
@@ -29,18 +29,18 @@ useEffect(() => {
 
       <main>
         <ul>
-          {cartoes.map(cartao => (
-              <Link key={cartao.id} to={`/cartao-visita/${cartao.id}`}>
+          {cartoes.map((cartao) => (
+            <Link key={cartao.id} to={`/cartao-visita/${cartao.id}`}>
               <li >
                 <h2>{cartao.name}</h2>
                 <p>{cartao.phone}</p>
                 <p>{cartao.email}</p>
               </li>
-              </Link>
-            ))}
+            </Link>
+          ))}
         </ul>
+        <span>{cartoes.length === 0 && 'Sem cartões de visita.'}</span>
       </main>
-      <span>{cartoes.length === 0 && 'Sem cartões de visita.'}</span>
     </div>
   );
 }
