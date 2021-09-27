@@ -1,0 +1,16 @@
+- App (Definição das Rotas)
+  - Tela da Home 
+    - Não precisa ter conteúdo
+    - Botão de voltar
+  - Tela Cartões de Visita
+    - Botão de voltar
+    - Botão ir pra Home
+    - Lista de cartões de visita (componente separado)
+      - Consulta lista em api externa
+      - Link para tela de detalhe do cartão de visita
+  - Tela de Detalhe do Cartão de Visita
+    - Botão de voltar
+    - Botão ir pra Home
+    - Cartão de Visita (componente separado)
+    - Consulta objeto em api externa
+    - Modal com foto do cartão (https://thispersondoesnotexist.com/) (bonus)
