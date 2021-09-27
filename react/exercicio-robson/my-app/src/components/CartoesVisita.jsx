@@ -24,7 +24,6 @@ function CartoesVisita() {
 
       <header>
         <h1>Cartões de Visita ({quantidade})</h1>
-        <p>frase frase frase</p>
       </header>
 
       <main>
