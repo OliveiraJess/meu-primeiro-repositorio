@@ -3,7 +3,7 @@ import { useHistory } from "react-router";
 function BotaoVoltar() {
 
     const history = useHistory()
-    const voltar = () => history.goBack
+    const voltar = () => history.goBack()
 
 
     return (

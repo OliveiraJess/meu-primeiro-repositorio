@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function CartoesVisita() {
 
   const [quantidade, setQuantidade] = useState(0)
-  const [cartoes, setCartoes] = useState()
+  const [cartoes, setCartoes] = useState([])
 
   useEffect(() => {
     async function fecthCartoes() {
@@ -28,15 +28,19 @@ function CartoesVisita() {
 
       <main>
         <ul>
-          {cartoes.map((cartao) => (
-            <Link key={cartao.id} to={`/cartao-visita/${cartao.id}`}>
-              <li >
-                <h2>{cartao.name}</h2>
-                <p>{cartao.phone}</p>
-                <p>{cartao.email}</p>
-              </li>
-            </Link>
-          ))}
+          {
+            cartoes.map((cartao) => { 
+              return (
+              <Link key={cartao.id} to={`/cartao-visita/${cartao.id}`}>
+                <li >
+                  <h2>{cartao.name}</h2>
+                  <p>{cartao.phone}</p>
+                  <p>{cartao.email}</p>
+                </li>
+              </Link>
+            )
+          })
+          }
         </ul>
         <span>{cartoes.length === 0 && 'Sem cartões de visita.'}</span>
       </main>
